@@ -1,0 +1,81 @@
+input:active, textarea:active {outline:none;}
+:focus {outline:none;}
+/*
+*
+*	КАТЕГОРИИ И БРЕНДЫ
+*
+*/
+.page_admin {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.label_block {
+	font-size: 1.4em;
+	margin-bottom: 15px;
+	color: orangered;
+}
+#categories_edit, #categories_add, #brand_edit {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.select_div {
+	display: flex;
+	border: 1px solid orange;
+	border-radius: 50px;
+	height: 35px;
+	padding: 0 10px;
+	box-sizing: border-box;
+	margin: 0 auto 20px;
+	position: relative;
+	width: 200px;
+	font-size: 0.8em;
+}
+#select_div-top {
+	border: 2px solid orange;
+	width: 250px;
+	font-size: 1em;
+}
+.select_div select {
+	position: relative;
+	z-index: 2;
+	background: none;
+	border: none;
+	font-size: 1em;
+	width: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+}
+.select_div div {
+	position: absolute;
+	right: 10px;
+	top: 4px;
+}
+#select_div-top div {
+	top: 0px;
+}
+.select_div div i {
+	color: orange;
+	font-size: 2em;
+}
+.text_div {
+	border: 1px solid orange;
+	border-radius: 50px;
+	width: 200px;
+	height: 35px;
+	padding: 0 10px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	margin: 0 0 10px;
+}
+.text_div input {
+	background: none;
+	border: none;
+	font-size: 0.8em;
+	width: 100%;
+}
