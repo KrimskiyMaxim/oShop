@@ -46,13 +46,13 @@
 					<div class="text_div">
 						<input type="text" name="category_name"	id="category_name" placeholder="Свойство" value="<?=$item['name']?>">
 						<? if($i>1): ?>
-						<i class="fa fa-times-circle-o" title="Удалить" style="cursor: pointer;" aria-hidden="true"></i>
+						<i class="fa fa-times-circle-o"  title="Удалить" onClick='$(this).parent("*").remove();' style="cursor: pointer;" aria-hidden="true"></i>
 						<? endif; ?>	
 					</div>
 				<? endforeach; ?>
 				</div>
-					<div class="text_div" id="add_key" title="Добавить свойство">
-						<i class="fa fa-plus-circle" aria-hidden="true"></i>
+					<div class="text_div" id="key_add_category" style="cursor: pointer;" title="Добавить свойство">
+						<i style="color: orange;" class="fa fa-plus-circle" aria-hidden="true"></i>
 					</div>
 				<div id="key_category_block">
 					<label for="submit_add_categories" title="Изменить"><i class="fa fa-check-circle-o" aria-hidden="true"></i></label>
@@ -84,13 +84,13 @@
 					<div><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></div>
 				</div>
 				<span class="label_block">Свойства товара</span>
-				<div id="attrListDiv">
+				<div id="AddAttrListDiv">
 					<div class="text_div">
 						<input type="text" name="category_name"	id="category_name" placeholder="Свойство">	
 					</div>
 				</div>
-					<div class="text_div" id="add_key" title="Добавить свойство">
-						<i class="fa fa-plus-circle" aria-hidden="true"></i>
+					<div style="cursor: pointer;" class="text_div" title="Добавить свойство" id="key_edit_category">
+						<i style="color: orange;" class="fa fa-plus-circle" aria-hidden="true"></i>
 					</div>
 				<div id="key_category_block">
 					<label for="submit_add_categories" title="Добавить"><i class="fa fa-check-circle-o" aria-hidden="true"></i></label>

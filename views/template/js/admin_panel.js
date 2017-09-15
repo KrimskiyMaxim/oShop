@@ -4,6 +4,13 @@
 // 	$("#attrList").append("<li><input type='text' id='text"+i+"' name='text"+i+"'<li>");
 //	i++;
 //});
+
+$('#key_add_category').click(function() {
+	$('#attrListDiv').append("<div class='text_div'><input type='text' name='category_name'	id='category_name' placeholder='Свойство'><i class='fa fa-times-circle-o' title='Удалить' onClick='$(this).parent(\"*\").remove();' style='cursor: pointer;' aria-hidden='true'></i></div>");
+});
+$('#key_edit_category').click(function() {
+	$('#AddAttrListDiv').append("<div class='text_div'><input type='text' name='category_name'	id='category_name' placeholder='Свойство'><i class='fa fa-times-circle-o' title='Удалить' onClick='$(this).parent(\"*\").remove();' style='cursor: pointer;' aria-hidden='true'></i></div>");
+});
 function funcSuccC(data) {
 	var begin = JSON.parse(data);
 	$('#category_name').attr("value", begin[0]['name']);
@@ -15,7 +22,7 @@ function funcSuccC(data) {
 		if (i == 0) {
 			$('#attrListDiv').append("<div class='text_div'><input type='text' name='category_name'	id='category_name' placeholder='Свойство' value='"+begin[1][i]['name']+"'></div>");
 		} else {
-			$('#attrListDiv').append("<div class='text_div'><input type='text' name='category_name'	id='category_name' placeholder='Свойство' value='"+begin[1][i]['name']+"'><i class='fa fa-times-circle-o' title='Удалить' style='cursor: pointer;' aria-hidden='true'></i></div>");
+			$('#attrListDiv').append("<div class='text_div'><input type='text' name='category_name'	id='category_name' placeholder='Свойство' value='"+begin[1][i]['name']+"'><i class='fa fa-times-circle-o' title='Удалить' onClick='$(this).parent(\"*\").remove();' style='cursor: pointer;' aria-hidden='true'></i></div>");
 		}
 		
 	}
