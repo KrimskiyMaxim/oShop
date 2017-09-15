@@ -34,7 +34,7 @@ input:active, textarea:active {outline:none;}
 	font-size: 0.8em;
 }
 #select_div-top {
-	border: 2px solid orange;
+	border: 1px solid orange;
 	width: 250px;
 	font-size: 1em;
 }
@@ -53,10 +53,10 @@ input:active, textarea:active {outline:none;}
 .select_div div {
 	position: absolute;
 	right: 10px;
-	top: 4px;
+	top: 5px;
 }
 #select_div-top div {
-	top: 0px;
+	top: 1px;
 }
 .select_div div i {
 	color: orange;
@@ -71,11 +71,39 @@ input:active, textarea:active {outline:none;}
 	box-sizing: border-box;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	margin: 0 0 10px;
+}
+.text_div i {
+	color: orangered;
+	font-size: 1.5em;
 }
 .text_div input {
 	background: none;
 	border: none;
 	font-size: 0.8em;
 	width: 100%;
+}
+#key_category_block {
+	display: flex;
+}
+#key_category_block label {
+	width: 70px;
+	border-radius: 50px;
+	background: orange;
+	text-align: center;
+	margin: 5px;
+	cursor: pointer;
+}
+#key_category_block label i{
+	color: white;
+	font-size: 2em;
+}
+#add_key {
+	align-items: center;
+	cursor: pointer;
+}
+#add_key i{
+	color: orange;
+	font-size: 2em;
 }

@@ -6,9 +6,19 @@
 //});
 function funcSuccC(data) {
 	var begin = JSON.parse(data);
-	$('#category_name').attr("placeholder", "Имя: "+begin['name']);
-	$('#category_sort').attr("placeholder", "Номер сортировки: "+begin['sort_order']);
-	$('#category_status option[value="'+begin['status']+'"]').prop('selected', true);
+	$('#category_name').attr("value", begin[0]['name']);
+	$('#category_sort').attr("value", begin[0]['sort_order']);
+	$('#category_status option[value="'+begin[0]['status']+'"]').prop('selected', true);
+	
+	$('#attrListDiv').html("");
+	for (var i = 0; i < begin[1].length; i++){
+		if (i == 0) {
+			$('#attrListDiv').append("<div class='text_div'><input type='text' name='category_name'	id='category_name' placeholder='Свойство' value='"+begin[1][i]['name']+"'></div>");
+		} else {
+			$('#attrListDiv').append("<div class='text_div'><input type='text' name='category_name'	id='category_name' placeholder='Свойство' value='"+begin[1][i]['name']+"'><i class='fa fa-times-circle-o' title='Удалить' style='cursor: pointer;' aria-hidden='true'></i></div>");
+		}
+		
+	}
 }
 function funcSuccB(data) {
 	var begin = JSON.parse(data);

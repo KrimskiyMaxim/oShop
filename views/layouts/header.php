@@ -25,7 +25,7 @@
 	</div>
 </div>
 <div id="top-categories">
-	<? foreach ($categoryList as $item): ?>
+	<? foreach ($categoryListH as $item): ?>
 		<a href="category/<?= $item['id']?>"><?= $item['name']?></a>
 	<? endforeach; ?>
 </div>
